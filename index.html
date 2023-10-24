@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/media-query.css">
+    <title>Calculadora Pessoal</title>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <fieldset>
+                    <legend>Quantidade:</legend>
+                    <input
+                        type="number"
+                        name="quantidade"
+                        id="quantidade"
+                        placeholder="Valor da produção"
+                        oninput="gerarOptionTempo()"
+                    >
+                </fieldset>
+                <fieldset>
+                    <legend>Multiplicador:</legend>
+                    <select
+                        name="multiplicador"
+                        id="multiplicador"
+                        oninput="gerarOptionTempo()"
+                    >
+                        <option value="0">Selecione a linha</option>
+                        <option value="17.5">C/B - 17.5</option>
+                        <option value="22"  >C/B - 22</option>
+                        <option value="22"  >J/Y - 22</option>
+                        <option value="22"  >J/Y - 22</option>
+                        <option value="22"  >F/Y - 22</option>
+                        <option value="22"  >F/Y - 22</option>
+                        <option value="22"  >F/A - 22</option>
+                        <option value="22"  >F/A - 22</option>
+                        <option value="22"  >J/A - 22</option>
+                        <option value="22"  >J/A - 22</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Tempo:</legend>
+                    <select
+                        name="tempo"
+                        id="tempo"
+                    >
+                        <option>Aguardando Valores</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Trabalhadores:</legend>
+                    <select name="trabalhadores" id="trabalhadores">
+                        <option value="1">1 - Solo</option>
+                        <option value="2">2 - Dupla</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Descarte:</legend>
+                    <input 
+                        type="number"
+                        name="descarte"
+                        id="descarte"
+                        placeholder="Quantidade de peças"
+                        value="0"
+                    >
+                </fieldset>
+                <button type="button" onclick="dadosTabela()">Calcular</button>
+                <table>
+                    <tr><td id="tabQuantidade"></td></tr>
+                    <tr><td id="tabCalc1"></td></tr>
+                    <tr><td id="tabTempo"></td></tr>
+                    <tr><td id="tabCalc2"></td></tr>
+                    <tr><td id="tabDescarte"></td></tr>
+                    <tr><td id="tabDescartePercentual"></td></tr>
+                    <tr><td id="tabMediaPorHora"></td></tr>
+                    <tr><td id="tabCalc3"></td></tr>
+                </table>
+            </article>
+        </section>
+    </main>
+</body>
+<script src="javascript/script.js"></script>
+</html>
