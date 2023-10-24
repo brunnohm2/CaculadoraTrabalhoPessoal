@@ -23,12 +23,18 @@ function calculo1(a, b){
 function porcentagem(a, b){
     a = Number(a)
     b = Number(b)
+    let c = (a/b)*100
 
-    return ((a/b)*100).toFixed(2)
+    if(c == 100) return c.toFixed(0)
+
+    return c.toFixed(2)
 }
 function porcentagem2(a, b){
     a = Number(a)
     b = Number(b)
+    let c = (a/(b+a))*100
+
+    if(c == 100)  return c.toFixed(0)
 
     return ((a/(b+a))*100).toFixed(2)
 }
