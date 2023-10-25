@@ -59,7 +59,6 @@
                             type="number"
                             name="descarte"
                             id="descarte"
-                            value="0"
                         >
                     </fieldset>
                 </div>
@@ -74,9 +73,9 @@
                     <tr><td id="tabMediaPorHora"></td></tr>
                     <tr><td id="tabCalc3"></td></tr>
                 </table>
-                <div class="oculto" id="mediaFinal">
+                <div id="mediaFinal">
                     <fieldset class="teste3">
-                        <legend>1</legend>
+                        <legend>% - 1</legend>
                         <input
                             type="number"
                             name="aCalc2"
@@ -84,7 +83,15 @@
                         >
                     </fieldset>
                     <fieldset class="teste3">
-                        <legend>2</legend>
+                        <legend>% - 2</legend>
+                        <input
+                            type="number"
+                            name="aMediaDP"
+                            id="aMediaDP"
+                        >
+                    </fieldset>
+                    <fieldset class="teste3">
+                        <legend>M<sub>e</sub></legend>
                         <input
                             type="number"
                             name="aMediaPorHora"
@@ -92,7 +99,7 @@
                         >
                     </fieldset>
                     <fieldset class="teste3">
-                        <legend>3</legend>
+                        <legend>T</legend>
                         <input
                             type="number"
                             name="aCalc3"
@@ -102,6 +109,7 @@
                     <button type="button" onclick="finalCalc1()">Calcular Média</button>
                     <table class="margem">
                         <tr><td id="tabFinalCalc2"></td></tr>
+                        <tr><td id="tabFinalMediaDP"></td></tr>
                         <tr><td id="tabFinalMediaPorHora"></td></tr>
                         <tr><td id="tabFinalCalc3"></td></tr>
                     </table>

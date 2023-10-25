@@ -16,13 +16,15 @@ let tabCalc3                = window.document.querySelector('td#tabCalc3')
 
 let mediaFinal = window.document.querySelector('div#mediaFinal')
 
-let aCalc2          = window.document.querySelector('input#aCalc2')
-let aMediaPorHora   = window.document.querySelector('input#aMediaPorHora')
-let aCalc3          = window.document.querySelector('input#aCalc3')
+let aCalc2                  = window.document.querySelector('input#aCalc2')
+let aMediaDP                = window.document.querySelector('input#aMediaDP')
+let aMediaPorHora           = window.document.querySelector('input#aMediaPorHora')
+let aCalc3                  = window.document.querySelector('input#aCalc3')
 
-let tabFinalCalc2          = window.document.querySelector('td#tabFinalCalc2')
-let tabFinalMediaPorHora   = window.document.querySelector('td#tabFinalMediaPorHora')
-let tabFinalCalc3          = window.document.querySelector('td#tabFinalCalc3')
+let tabFinalCalc2           = window.document.querySelector('td#tabFinalCalc2')
+let tabFinalMediaDP         = window.document.querySelector('td#tabFinalMediaDP')
+let tabFinalMediaPorHora    = window.document.querySelector('td#tabFinalMediaPorHora')
+let tabFinalCalc3           = window.document.querySelector('td#tabFinalCalc3')
 
 function calculo1(a, b){
     a = Number(a)
@@ -96,6 +98,10 @@ function finalCalc1(){
     tabFinalCalc2.innerHTML = porcentagem(Number(tabCalc1.innerHTML), Number(tabTempo.innerHTML))
     tabFinalCalc2.innerHTML = ((Number(tabFinalCalc2.innerHTML)+Number(aCalc2.value))/2)
     tabFinalCalc2.innerHTML = Number(tabFinalCalc2.innerHTML).toFixed(2)+'%'
+
+    tabFinalMediaDP.innerHTML = porcentagem2(Number(quantidade.value), Number(descarte.value))
+    tabFinalMediaDP.innerHTML = ((Number(tabFinalMediaDP.innerHTML)+Number(aMediaDP.value))/2)
+    tabFinalMediaDP.innerHTML = Number(tabFinalMediaDP.innerHTML).toFixed(2)+'%'
 
     tabFinalMediaPorHora.innerHTML = Number(media(Number(quantidade.value), Number(tempo.value)))
     tabFinalMediaPorHora.innerHTML = ((Number(tabFinalMediaPorHora.innerHTML)+Number(aMediaPorHora.value))/2)
