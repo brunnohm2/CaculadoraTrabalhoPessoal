@@ -4,6 +4,7 @@ let multiplicador   = window.document.querySelector('select#multiplicador')
 let descarte        = window.document.querySelector('input#descarte')
 let trabalhadores   = window.document.querySelector('select#trabalhadores')
 
+
 let tabQuantidade           = window.document.querySelector('td#tabQuantidade')
 let tabCalc1                = window.document.querySelector('td#tabCalc1')
 let tabTempo                = window.document.querySelector('td#tabTempo')
@@ -13,6 +14,15 @@ let tabDescartePercentual   = window.document.querySelector('td#tabDescartePerce
 let tabMediaPorHora         = window.document.querySelector('td#tabMediaPorHora')
 let tabCalc3                = window.document.querySelector('td#tabCalc3')
 
+let mediaFinal = window.document.querySelector('div#mediaFinal')
+
+let aCalc2          = window.document.querySelector('input#aCalc2')
+let aMediaPorHora   = window.document.querySelector('input#aMediaPorHora')
+let aCalc3          = window.document.querySelector('input#aCalc3')
+
+let tabFinalCalc2          = window.document.querySelector('td#tabFinalCalc2')
+let tabFinalMediaPorHora   = window.document.querySelector('td#tabFinalMediaPorHora')
+let tabFinalCalc3          = window.document.querySelector('td#tabFinalCalc3')
 
 function calculo1(a, b){
     a = Number(a)
@@ -70,5 +80,26 @@ function dadosTabela(){
     tabDescarte.innerHTML = descarte.value
     tabDescartePercentual.innerHTML = porcentagem2(Number(quantidade.value), Number(descarte.value))+'%'
     tabMediaPorHora.innerHTML = media(Number(quantidade.value), Number(tempo.value))
-    tabCalc3.innerHTML = Number(tempo.value)*Number(trabalhadores.value)
+    tabCalc3.innerHTML = Number(tempo.value)*Number(valorMultiplicador())
+    mediaFinal.classList.remove('oculto')
+    mediaFinal.classList.add('visivel')
+}
+function valorMultiplicador(){
+    if(Number(multiplicador.value) == 26.5) return 2
+    if(Number(multiplicador.value) == 20.3) return 2
+    if(Number(multiplicador.value) == 17.5) return 2
+    if(Number(multiplicador.value) == 21  ) return 2
+    return 1
+}
+
+function finalCalc1(){
+    tabFinalCalc2.innerHTML = porcentagem(Number(tabCalc1.innerHTML), Number(tabTempo.innerHTML))
+    tabFinalCalc2.innerHTML = ((Number(tabFinalCalc2.innerHTML)+Number(aCalc2.value))/2)
+    tabFinalCalc2.innerHTML = Number(tabFinalCalc2.innerHTML).toFixed(2)+'%'
+
+    tabFinalMediaPorHora.innerHTML = Number(media(Number(quantidade.value), Number(tempo.value)))
+    tabFinalMediaPorHora.innerHTML = ((Number(tabFinalMediaPorHora.innerHTML)+Number(aMediaPorHora.value))/2)
+    tabFinalMediaPorHora.innerHTML = Number(tabFinalMediaPorHora.innerHTML).toFixed(2)
+
+    tabFinalCalc3.innerHTML = Number(tabCalc3.innerHTML)+Number(aCalc3.value)
 }
