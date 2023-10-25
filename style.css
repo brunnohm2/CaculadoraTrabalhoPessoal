@@ -31,7 +31,7 @@ section{
     border: 1px solid black;
     border-radius: 10px;
     overflow: hidden;
-    height: 565px;
+    height: fit-content;
     width: 350px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
     background-color: var(--laranja-escuro);
@@ -131,4 +131,7 @@ button{
 }
 .visivel{
     display: block;
+}
+.margem{
+ margin-bottom: 5px;
 }
