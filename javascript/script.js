@@ -108,5 +108,5 @@ function finalCalc1(){
     tabFinalMediaPorHora.innerHTML = Number(tabFinalMediaPorHora.innerHTML).toFixed(2)
 
     let testar = Number(aCalc3.value)+Number(tabCalc3.innerHTML).toFixed(2)
-    tabFinalCalc3.innerHTML = testar
+    tabFinalCalc3.innerHTML = testar.toFixed(2)
 }
