@@ -50,7 +50,7 @@ ul>li{
 fieldset{
     margin: 5px 10px 0px 10px;
     background-color: white;
-    padding: 8px;
+    padding: 3px;
     border: none;
     border-radius: 5px;
     box-shadow: 0px 0px 4px rgba(0, 0, 255, 1);
@@ -59,10 +59,6 @@ fieldset{
 .teste{
     display: inline;
     width: 152px;
-}
-.teste3{
-    display: inline;
-    width: 64px;
 }
 input[type=number]{
     height: 25px;
