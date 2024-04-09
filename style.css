@@ -67,6 +67,7 @@ input[type=number]{
     padding: 5px;
     border: 1px solid black;
     border-radius: 5px;
+    text-align: right;
 }
 select{
     border-radius: 5px;
@@ -78,7 +79,8 @@ select{
     width: 100%;
 }
 legend{
-    font-size: 1.3em;
+    font-size: 1.0em;
+    font-weight: bold;
     padding: 3px;
     margin: auto;
     background-color: white;

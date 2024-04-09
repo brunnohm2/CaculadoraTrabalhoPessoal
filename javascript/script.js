@@ -91,6 +91,7 @@ function valorMultiplicador(){
     if(Number(multiplicador.value) == 20.3) return 2
     if(Number(multiplicador.value) == 17.5) return 2
     if(Number(multiplicador.value) == 21  ) return 2
+    if(Number(multiplicador.value) == 20.7) return 2
     return 1
 }
 

@@ -13,21 +13,19 @@
             <article>
                 <div>
                     <fieldset class="teste">
-                        <legend>Quantidade:</legend>
+                        <legend>Produção:</legend>
                         <input
                             type="number"
-                            name="quantidade"
-                            id="quantidade"
-                            placeholder="Produção"
-                            oninput="gerarOptionTempo()"
+                            name="producao"
+                            id="producao"
+                            value="8"
                         >
                     </fieldset>
                     <fieldset class="teste">
-                        <legend>Multiplicador:</legend>
+                        <legend>Linha/Valor:</legend>
                         <select
                             name="multiplicador"
                             id="multiplicador"
-                            oninput="gerarOptionTempo()"
                         >
                             <option value="0">Selecione a linha</option>
                             <option value="26.5"  >CBS - 26.5</option>
@@ -44,82 +42,84 @@
                 </div>
                 <div>
                     <fieldset class="teste">
-                        <legend>Tempo:</legend>
+                        <legend>Tempo de Operação:</legend>
                         <select
-                            name="tempo"
-                            id="tempo"
+                            name="tempoDeOperacao"
+                            id="tempoDeOperacao"
                         >
                             <option>Aguardando...</option>
                         </select>
                     </fieldset>
                     <fieldset class="teste">
-                        <legend>Descarte:</legend>
+                        <legend>Defeito:</legend>
                         <input
                             type="number"
-                            name="descarte"
-                            id="descarte"
+                            name="defeitos"
+                            id="defeitos"
+                            value="7"
                         >
                     </fieldset>
                 </div>
-                <button type="button" onclick="dadosTabela()">Calcular</button>
+                <button type="button">Calcular</button>
                 <table>
-                    <tr><td id="tabQuantidade"></td></tr>
-                    <tr><td id="tabCalc1"></td></tr>
-                    <tr><td id="tabTempo"></td></tr>
-                    <tr><td id="tabCalc2"></td></tr>
-                    <tr><td id="tabDescarte"></td></tr>
-                    <tr><td id="tabDescartePercentual"></td></tr>
-                    <tr><td id="tabMediaPorHora"></td></tr>
-                    <tr><td id="tabCalc3"></td></tr>
+                    <tr><td id="tabProducao">Produção</td></tr>
+                    <tr><td id="tabTempoOperacional">Tempo Operacional</td></tr>
+                    <tr><td id="tabTempoDeOperacao">Tempo de Operação</td></tr>
+                    <tr><td id="tabTaxaDeOperacao">Taxa de Operação</td></tr>
+                    <tr><td id="tabDefeitos">Defeitos</td></tr>
+                    <tr><td id="tabTaxaDeDefeitos">Taxa de Defeitos</td></tr>
+                    <tr><td id="tabMediaPorHora">Media por Hora</td></tr>
+                    <tr><td id="tabTempoDeOperacaoPorPessoa">Tempo de Operação/Pessoa</td></tr>
                 </table>
-                <div class="oculto" id="mediaFinal">
+                <div id="tabela1"></div>
+                <div id="mediaFinal">
                     <div>
                         <fieldset class="teste">
-                            <legend>% - 1</legend>
+                            <legend>Taxa de Operação</legend>
                             <input
                                 type="number"
-                                name="aCalc2"
-                                id="aCalc2"
+                                name="taxaDeOperacao2"
+                                id="taxaDeOperacao2"
                             >
                         </fieldset>
                         <fieldset class="teste">
-                            <legend>% - 2</legend>
+                            <legend>Taxa de Defeitos</legend>
                             <input
                                 type="number"
-                                name="aMediaDP"
-                                id="aMediaDP"
+                                name="taxaDeDefeitos2"
+                                id="taxaDeDefeitos2"
                             >
                         </fieldset>
                     </div>
                     <div>
                         <fieldset class="teste">
-                            <legend>M<sub>e</sub></legend>
+                            <legend>Média por Hora</legend>
                             <input
                                 type="number"
-                                name="aMediaPorHora"
-                                id="aMediaPorHora"
+                                name="mediaPorHora2"
+                                id="mediaPorHora2"
                             >
                         </fieldset>
                         <fieldset class="teste">
-                            <legend>T</legend>
+                            <legend>Tmp. de Op. Total</legend>
                             <input
                                 type="number"
-                                name="aCalc3"
-                                id="aCalc3"
+                                name="tempoDeOperacaoPorPessoa2"
+                                id="tempoDeOperacaoPorPessoa2"
                             >
                         </fieldset>
                     </div>
-                    <button type="button" onclick="finalCalc1()">Calcular Média</button>
+                    <button type="button" >Calcular Média</button>
                     <table class="margem">
-                        <tr><td id="tabFinalCalc2"></td></tr>
-                        <tr><td id="tabFinalMediaDP"></td></tr>
-                        <tr><td id="tabFinalMediaPorHora"></td></tr>
-                        <tr><td id="tabFinalCalc3"></td></tr>
+                        <tr><td id="tabTaxaDeOperacaoF">Taxa de Operação</td></tr>
+                        <tr><td id="tabTaxaDeDefeitosF">Taxa de Defeitos</td></tr>
+                        <tr><td id="tabMediaPorHoraF">Media por Hora</td></tr>
+                        <tr><td id="tabTempoDeOperacaoPorPessoaF">Tempo de Operação por Pessoa</td></tr>
                     </table>
                 </div>
             </article>
         </section>
     </main>
 </body>
-<script src="javascript/script.js"></script>
+<script src="javascript/calculadora.js" type="module"></script>
 </html>
