@@ -62,7 +62,7 @@ function gerarOptionTempo(){
     let inicio = 4.17
     let max = 40
 
-    for(let i =0; i< max; i++){
+    for(let i=0; i<max; i++){
         let valor = calculo1(quantidade.value, multiplicador.value)
         valor = porcentagem(valor, inicio)
         if(valor<=100){

@@ -1,2 +1,2 @@
-# CaculadoraTrabalhoPessoal
- Reduz o tempo de cáculo ao fechar a produção do dia trabalhado
+# Calculadora de Trabalho Pessoal
+Reduz o tempo de cálculo ao fechar a produção do dia trabalhado
