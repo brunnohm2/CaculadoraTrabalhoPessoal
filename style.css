@@ -106,6 +106,7 @@ caption{
 }
 tr{
     color: rgb(48, 48, 48);
+    font-size: 0.7em;
 }
 tr:nth-child(odd){
     background-color: var(--verde-escuro);
