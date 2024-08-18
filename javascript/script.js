@@ -4,7 +4,6 @@ let multiplicador   = window.document.querySelector('select#multiplicador')
 let descarte        = window.document.querySelector('input#descarte')
 let trabalhadores   = window.document.querySelector('select#trabalhadores')
 
-
 let tabQuantidade           = window.document.querySelector('td#tabQuantidade')
 let tabCalc1                = window.document.querySelector('td#tabCalc1')
 let tabTempo                = window.document.querySelector('td#tabTempo')
@@ -96,7 +95,6 @@ function valorMultiplicador(){
     if(Number(multiplicador.value) == 20.7) return 2
     return 1
 }
-
 function finalCalc1(){
     tabFinalCalc2.innerHTML = porcentagem(Number(tabCalc1.innerHTML), Number(tabTempo.innerHTML))
     tabFinalCalc2.innerHTML = ((Number(tabFinalCalc2.innerHTML)+Number(aCalc2.value))/2)
