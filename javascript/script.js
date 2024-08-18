@@ -13,6 +13,7 @@ let tabDescartePercentual   = window.document.querySelector('td#tabDescartePerce
 let tabMediaPorHora         = window.document.querySelector('td#tabMediaPorHora')
 let tabCalc3                = window.document.querySelector('td#tabCalc3')
 
+let mediaPrimeira = window.document.querySelector('div#mediaPrimeira')
 let mediaFinal = window.document.querySelector('div#mediaFinal')
 
 let aCalc2                  = window.document.querySelector('input#aCalc2')
@@ -59,7 +60,7 @@ function gerarOptionTempo(){
     tempo.innerHTML = ''
     let minutos = 0.25
     let inicio = 4.17
-    let max = 40
+    let max = 80
 
     for(let i=0; i<max; i++){
         let valor = calculo1(quantidade.value, multiplicador.value)
