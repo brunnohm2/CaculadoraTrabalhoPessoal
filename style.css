@@ -58,7 +58,7 @@ fieldset{
 }
 .teste{
     display: inline;
-    width: 152px;
+    width: 150px;
 }
 input[type=number]{
     height: 25px;
@@ -118,6 +118,7 @@ td{
 button{
     margin: auto;
     margin-top: 5px;
+    margin-bottom: 5px;
     display: block;
     height: 30px;
     width: 95%;

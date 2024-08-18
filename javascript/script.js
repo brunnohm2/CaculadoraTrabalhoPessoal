@@ -83,6 +83,8 @@ function dadosTabela(){
     tabDescartePercentual.innerHTML = porcentagem2(Number(quantidade.value), Number(descarte.value))+'%'
     tabMediaPorHora.innerHTML = media(Number(quantidade.value), Number(tempo.value))
     tabCalc3.innerHTML = Number(tempo.value)*Number(valorMultiplicador())
+    mediaPrimeira.classList.remove('oculto')
+    mediaPrimeira.classList.add('visivel')
     mediaFinal.classList.remove('oculto')
     mediaFinal.classList.add('visivel')
 }

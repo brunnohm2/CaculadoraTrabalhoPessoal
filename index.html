@@ -13,7 +13,7 @@
             <article>
                 <div>
                     <fieldset class="teste">
-                        <legend>Quantidade:</legend>
+                        <legend>Produção do dia:</legend>
                         <input
                             type="number"
                             name="quantidade"
@@ -30,15 +30,15 @@
                             oninput="gerarOptionTempo()"
                         >
                             <option value="0">Selecione a linha</option>
-                            <option value="26.5"  >CBS - 26.5</option>
-                            <option value="47.5"  >CBS - 47.5</option>
-                            <option value="20.3"  >J/Y - 20.3</option>
-                            <option value="23.5"  >J/Y - 23.5</option>
-                            <option value="17.5"  >F/Y - 17.5</option>
-                            <option value="22.5"  >F/Y - 22.5</option>
-                            <option value="21"  >F/A - 21</option>
-                            <option value="42"  >F/A - 42</option>
-                            <option value="20.7"  >J/A - 20.7</option>
+                            <option value="26.5"  >CBS - 26.5 (2 Pessoas)</option>
+                            <option value="47.5"  >CBS - 47.5 (1 Pessoa) </option>
+                            <option value="20.3"  >J/Y - 20.3 (2 Pessoas)</option>
+                            <option value="23.5"  >J/Y - 23.5 (1 Pessoa)</option>
+                            <option value="17.5"  >F/Y - 17.5 (2 Pessoas)</option>
+                            <option value="22.5"  >F/Y - 22.5 (1 Pessoa)</option>
+                            <option value="21"  >F/A - 21 (2 Pessoas)</option>
+                            <option value="42"  >F/A - 42 (1 Pessoa)</option>
+                            <option value="20.7"  >J/A - 20.7 (1 Pessoa)</option>
                         </select>
                     </fieldset>
                 </div>
@@ -62,20 +62,22 @@
                     </fieldset>
                 </div>
                 <button type="button" onclick="dadosTabela()">Calcular</button>
-                <table>
-                    <tr><td id="tabQuantidade"></td></tr>
-                    <tr><td id="tabCalc1"></td></tr>
-                    <tr><td id="tabTempo"></td></tr>
-                    <tr><td id="tabCalc2"></td></tr>
-                    <tr><td id="tabDescarte"></td></tr>
-                    <tr><td id="tabDescartePercentual"></td></tr>
-                    <tr><td id="tabMediaPorHora"></td></tr>
-                    <tr><td id="tabCalc3"></td></tr>
-                </table>
+                <div class="oculto" id="mediaPrimeira">
+                    <table>
+                        <tr><td>1</td><td id="tabQuantidade"></td></tr>
+                        <tr><td>2</td><td id="tabCalc1"></td></tr>
+                        <tr><td>3</td><td id="tabTempo"></td></tr>
+                        <tr><td>4</td><td id="tabCalc2"></td></tr>
+                        <tr><td>5</td><td id="tabDescarte"></td></tr>
+                        <tr><td>6</td><td id="tabDescartePercentual"></td></tr>
+                        <tr><td>7</td><td id="tabMediaPorHora"></td></tr>
+                        <tr><td>8</td><td id="tabCalc3"></td></tr>
+                    </table>
+                </div>
                 <div class="oculto" id="mediaFinal">
                     <div>
                         <fieldset class="teste">
-                            <legend>% - 1</legend>
+                            <legend>% - 4</legend>
                             <input
                                 type="number"
                                 name="aCalc2"
@@ -83,7 +85,7 @@
                             >
                         </fieldset>
                         <fieldset class="teste">
-                            <legend>% - 2</legend>
+                            <legend>% - 6</legend>
                             <input
                                 type="number"
                                 name="aMediaDP"
@@ -93,7 +95,7 @@
                     </div>
                     <div>
                         <fieldset class="teste">
-                            <legend>M<sub>e</sub></legend>
+                            <legend>M<sub>e</sub>- 7</legend>
                             <input
                                 type="number"
                                 name="aMediaPorHora"
@@ -101,7 +103,7 @@
                             >
                         </fieldset>
                         <fieldset class="teste">
-                            <legend>T</legend>
+                            <legend>T - 8</legend>
                             <input
                                 type="number"
                                 name="aCalc3"
