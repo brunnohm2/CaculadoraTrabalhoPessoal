@@ -60,14 +60,15 @@ function gerarOptionTempo(){
     tempo.innerHTML = ''
     let minutos = 0.25
     let inicio = 4.17
-    let max = 80
+    let max = 50
 
     for(let i=0; i<max; i++){
         let valor = calculo1(quantidade.value, multiplicador.value)
+        let mediaPorHora = media(quantidade.value,inicio)
         valor = porcentagem(valor, inicio)
         if(valor<=100){
             let option = window.document.createElement('option')
-            option.text = `${inicio} (${valor}%)`
+            option.text = `${inicio} - (${valor}%)(${mediaPorHora})`
             option.value = inicio
             tempo.appendChild(option)
         }
@@ -76,13 +77,13 @@ function gerarOptionTempo(){
 }
 function dadosTabela(){
     tabQuantidade.innerHTML = quantidade.value
-    tabCalc1.innerHTML = calculo1(Number(quantidade.value),Number(multiplicador.value))
+    tabCalc1.innerHTML = calculo1(quantidade.value,multiplicador.value)
     tabTempo.innerHTML = tempo.value
-    tabCalc2.innerHTML = porcentagem(Number(tabCalc1.innerHTML), Number(tabTempo.innerHTML))+'%'
+    tabCalc2.innerHTML = porcentagem(tabCalc1.innerHTML, tabTempo.innerHTML)+'%'
     tabDescarte.innerHTML = descarte.value
-    tabDescartePercentual.innerHTML = porcentagem2(Number(quantidade.value), Number(descarte.value))+'%'
-    tabMediaPorHora.innerHTML = media(Number(quantidade.value), Number(tempo.value))
-    tabCalc3.innerHTML = Number(tempo.value)*Number(valorMultiplicador())
+    tabDescartePercentual.innerHTML = porcentagem2(quantidade.value, descarte.value)+'%'
+    tabMediaPorHora.innerHTML = media(quantidade.value, tempo.value)
+    tabCalc3.innerHTML = tempo.value*valorMultiplicador()
     mediaPrimeira.classList.remove('oculto')
     mediaPrimeira.classList.add('visivel')
     mediaFinal.classList.remove('oculto')
